@@ -1,5 +1,7 @@
 # 整体架构
 
+![architecture](https://raw.githubusercontent.com/Zouxxyy/E-commerce-warehouse/master/resource/images/architecture.png)
+
 ## 集群服务规划
 
 | 服务名称             | 子服务               | 服务器 dell-r720 | 服务器 dell-r730-4 | 服务器 dell-r730-5 |
@@ -65,17 +67,23 @@
 
 ## 用户行为日志采集
 
-![applog.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/2356284/1647854381019-c7c5f2b7-d088-4f5a-a18b-33aa0b90e438.jpeg#clientId=u4cff95c9-d4ac-4&from=drop&id=u17327fd7&margin=%5Bobject%20Object%5D&name=applog.jpg&originHeight=477&originWidth=1715&originalType=binary&ratio=1&size=78774&status=done&style=none&taskId=u27654fde-2522-4ee4-b4f5-2a9f9916511)
+![applog](https://raw.githubusercontent.com/Zouxxyy/E-commerce-warehouse/master/resource/images/applog.jpg)
 
 ## 业务数据采集
 
-![dblog.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/2356284/1647854381258-fe65d917-7ed9-4021-8935-bf01f17a51ea.jpeg#clientId=u4cff95c9-d4ac-4&from=drop&id=ue93a76cd&margin=%5Bobject%20Object%5D&name=dblog.jpg&originHeight=805&originWidth=1721&originalType=binary&ratio=1&size=123217&status=done&style=none&taskId=u1656bdd5-b90c-47ad-b580-aab2b16d7b8)
+![dblog](https://raw.githubusercontent.com/Zouxxyy/E-commerce-warehouse/master/resource/images/dblog.jpg)
 
 # 数据仓库
 ## 架构图
 
+![warehouse](https://raw.githubusercontent.com/Zouxxyy/E-commerce-warehouse/master/resource/images/warehouse.jpg)
+
 ## 表
 
+![tables](https://raw.githubusercontent.com/Zouxxyy/E-commerce-warehouse/master/resource/images/tables.jpg)
+
 # 调度器
+
+![dolphinscheduler](https://raw.githubusercontent.com/Zouxxyy/E-commerce-warehouse/master/resource/images/dolphinscheduler.jpg)
 
 # 整体流程图
