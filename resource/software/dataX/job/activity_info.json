@@ -1,0 +1,86 @@
+{
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": 3
+      },
+      "errorLimit": {
+        "record": 0,
+        "percentage": 0.02
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "root",
+            "password": "123456",
+            "column": [
+              "id",
+              "activity_name",
+              "activity_type",
+              "activity_desc",
+              "start_time",
+              "end_time",
+              "create_time"
+            ],
+            "splitPk": "",
+            "connection": [
+              {
+                "table": [
+                  "activity_info"
+                ],
+                "jdbcUrl": [
+                  "jdbc:mysql://dell-r720:3306/gmall"
+                ]
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "hdfswriter",
+          "parameter": {
+            "defaultFS": "hdfs://dell-r720:8021",
+            "fileType": "text",
+            "path": "${targetdir}",
+            "fileName": "activity_info",
+            "column": [
+              {
+                "name": "id",
+                "type": "bigint"
+              },
+              {
+                "name": "activity_name",
+                "type": "string"
+              },
+              {
+                "name": "activity_type",
+                "type": "string"
+              },
+              {
+                "name": "activity_desc",
+                "type": "string"
+              },
+              {
+                "name": "start_time",
+                "type": "string"
+              },
+              {
+                "name": "end_time",
+                "type": "string"
+              },
+              {
+                "name": "create_time",
+                "type": "string"
+              }
+            ],
+            "writeMode": "append",
+            "fieldDelimiter": "\t",
+            "compress": "gzip"
+          }
+        }
+      }
+    ]
+  }
+}

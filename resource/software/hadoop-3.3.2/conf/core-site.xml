@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+    <!-- 指定NameNode的地址 -->
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://dell-r720:8021</value>
+    </property>
+    <!-- 指定hadoop数据的存储目录 -->
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/home/zxy/software/hadoop-3.3.2/data</value>
+    </property>
+    <!-- 配置HDFS网页登录使用的静态用户为zxy -->
+    <property>
+        <name>hadoop.http.staticuser.user</name>
+        <value>zxy</value>
+    </property>
+    <!-- 配置该zxy(superUser)允许通过代理访问的主机节点 -->
+    <property>
+        <name>hadoop.proxyuser.zxy.hosts</name>
+        <value>*</value>
+    </property>
+    <!-- 配置该zxy(superUser)允许通过代理用户所属组 -->
+    <property>
+        <name>hadoop.proxyuser.zxy.groups</name>
+        <value>*</value>
+    </property>
+    <!-- 配置该zxy(superUser)允许通过代理的用户-->
+    <property>
+        <name>hadoop.proxyuser.zxy.users</name>
+        <value>*</value>
+    </property>
+</configuration>
